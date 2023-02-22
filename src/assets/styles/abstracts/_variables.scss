@@ -1,0 +1,31 @@
+// RWD Breakpoints
+$rwdS: 576;
+$rwdM: 850;
+$rwdL: 1440;
+$rwdX: 1600;
+$rwdXL: 1920;
+
+// Devices
+$mobile: $rwdS + px;
+$tablet: $rwdM + px;
+$desktop: $rwdL + px;
+
+// Font
+$font-8-bit: 'EditUndo', cursive;
+
+// Color
+$color-black: #000000;
+$color-gray: #cbcbcb;
+$color-darkgray: #969696;
+$color-white: #ffffff;
+$color-yellow: #f5ea49;
+
+// Duration
+
+$primaryDuration: .2s;
+$secondaryDuration: .35s;
+
+// Ease
+
+$easeOutBack: cubic-bezier(0.34, 1.56, 0.64, 1);
+

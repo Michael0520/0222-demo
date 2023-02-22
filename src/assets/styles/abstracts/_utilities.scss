@@ -1,0 +1,180 @@
+/*--------------- 顯示與隱藏 ---------------*/
+
+.visible {
+    &-desktop {
+        display: inline;
+        @include tablet {
+            display: none;
+        }
+    }
+    &-tablet {
+        display: none;
+        @include tablet {
+            display: inline;
+        }
+    }
+    &-mobile {
+        display: none;
+        @include mobile {
+            display: inline;
+        }
+    }
+}
+
+.hidden {
+    &-desktop {
+        display: none;
+        @include tablet {
+            display: inline;
+        }
+    }
+    &-tablet {
+        display: inline;
+        @include tablet {
+            display: none;
+        }
+    }
+    &-mobile {
+        display: inline;
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.hide-block {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+}
+
+/*--------------- 排版與定位 ---------------*/
+
+.align-items-center {
+    text-align: center;
+    > ul {
+        font-size: 0;
+        > li {
+            display: inline-block;
+            font-size: 14px;
+            vertical-align: top;
+        }
+    }
+}
+
+.clearfix::after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.flt-r {float: right;}
+.flt-l {float: left;}
+
+.pos-a {position: absolute;}
+.pos-f {position: fixed;}
+
+/*--------------- 邊框 ---------------*/
+
+.rounded {
+
+    overflow: hidden;
+
+    &-default {
+        border-radius: 17px;
+        @include tablet {
+            border-radius: 19px;
+        }
+        @include mobile {
+            border-radius: vw(19);
+        }
+    }
+
+}
+
+/*--------------- 文字 ---------------*/
+
+// .color {
+//     &-primary { color: $primaryColor; }
+//     &-secondary { color: $secondaryColor; }
+//     &-lightgreen { color: $lightGreen; }
+//     &-quantity { color: #dc8677; }
+//     &-red {color: #e60012;}
+// }
+
+.weight {
+    &-400 {font-weight: 400;}
+    &-500 {font-weight: 500;}
+    &-600 {font-weight: 600;}
+    &-900 {font-weight: 900;}
+}
+
+@for $i from 1 through 5 {
+    .kerning-#{$i} {
+        letter-spacing: $i + px;
+        @include tablet {
+            letter-spacing: $i * 1.5 + px;
+        }
+        @include mobile {
+            letter-spacing: vw($i * 1.5);
+        }
+    }
+}
+
+.text {
+    &-xl {
+        font-size: 36px;
+        @include tablet {
+            font-size: 48px;
+        }
+        @include mobile {
+            font-size: vw(48);
+        }
+    }
+    &-l {
+        font-size: 28px;
+        @include tablet {
+            font-size: 36px;
+        }
+        @include mobile {
+            font-size: vw(36);
+        }
+    }
+    &-center {
+        text-align: center;
+    }
+    &-hide {
+        @include hide-text
+    }
+}
+
+/*--------------- 其他 ---------------*/
+
+.jump {
+    animation: jump .5s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(vmin(5));
+    }
+    49% {
+        transform: translateY(vmin(5));
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

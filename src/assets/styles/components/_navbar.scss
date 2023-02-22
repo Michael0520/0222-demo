@@ -1,0 +1,15 @@
+.test{
+    @include mobile{
+        font-size: vw(20);
+    }
+}
+
+.bg{
+    width: 200px;
+    @include tablet{
+        width: vwM(200);
+    }
+    @include desktop{
+        width: vwL(200);
+    }
+}

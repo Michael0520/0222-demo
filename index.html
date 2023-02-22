@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    />
+  </head>
+  <body class="bg-bg-black">
+    <div
+      id="app"
+      class="selection:bg-green-100 mx-auto flex h-screen w-full max-w-[1440px] flex-col items-center justify-between py-8 text-center text-[#2c3e50]"
+    >
+      <section
+        class="h-full w-full bg-[url('/images/home/home_banner.png')] bg-cover bg-center bg-no-repeat object-cover"
+      >
+        <%- include('navbar/navbar.html') %>
+      </section>
+
+      <h1 class="test">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+        soluta!
+      </h1>
+      <div>
+        <h1
+          class="bg-gradient-to-r from-green-600 to-sky-400 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent"
+        >
+          Hello !
+        </h1>
+        <h3 class="text-gray-500 my-4 text-2xl font-bold">
+          Vite + JS + tailwindcss v3
+        </h3>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

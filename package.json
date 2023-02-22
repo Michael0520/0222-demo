@@ -1,0 +1,24 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=watch vite",
+    "build": "cross-env TAILWIND_MODE=build vite build",
+    "serve": "vite preview",
+    "local-host": "vite --host"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.5",
+    "sass": "^1.58.3",
+    "vitawind": "^2.0.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "daisyui": "^2.50.2",
+    "swiper": "^8.4.5",
+    "vite-plugin-ejs": "^1.6.4",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-html": "^3.2.0"
+  },
+  "name": "dim-website"
+}

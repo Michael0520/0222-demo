@@ -27,4 +27,3 @@ yarn dev
 yarn build
 # or `npm run build`
 ```
-# DIM-website
