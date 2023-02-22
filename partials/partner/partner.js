@@ -7,14 +7,7 @@ const container = document.querySelector(".others-partners");
 // 動態生成 img 標籤，並加入到容器中
 for (let i = 1; i <= imageCount; i++) {
   const img = document.createElement("img");
-  img.classList.add(
-    "object-scale-down",
-    "partner-img",
-    "h-auto",
-    "max-h-full",
-    "w-auto",
-    "max-w-full"
-  );
+  img.classList.add("w-[15%]", "aspect-square", "object-contain");
   img.src = `/images/partner/other-partners/lg/partner${i
     .toString()
     .padStart(2, "0")}.png`;
