@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
     />
   </head>
-  <body class="bg-bg-black">
+  <body class="bg-bg-black text-bg-white">
     <div
       id="app"
-      class="selection:bg-green-100 mx-auto flex h-screen w-full max-w-[1440px] flex-col items-center justify-between py-8 text-center text-[#2c3e50]"
+      class="selection:bg-green-100 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between text-center text-[#2c3e50]"
     >
       <section
-        class="h-full w-full bg-[url('/images/home/home_banner.png')] bg-cover bg-center bg-no-repeat object-cover"
+        class="w-full bg-[url('/images/home/home_banner.png')] bg-cover bg-center bg-no-repeat object-cover h-screen"
       >
         <%- include('navbar/navbar.html') %>
       </section>
@@ -35,6 +35,9 @@
           Vite + JS + tailwindcss v3
         </h3>
       </div>
+
+      <!-- footer -->
+      <%- include('footer/footer.html') %>
     </div>
 
     <script type="module" src="./src/main.js"></script>

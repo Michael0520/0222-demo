@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     backgroundImage: {
       "home-banner": "url('/images/home/home_banner.png')",
+      "form-banner": "url('/images/form_banner.png')",
     },
     colors: {
       bg: {
